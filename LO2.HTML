@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!--UC3LO2
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>--UC3LO2</title>
+
+    
+    
+    <style>
+        #main{
+            border: 2px;
+            border-style: solid;
+            margin: 20px;
+            padding: 30px;   
+    }
+    #dinerTable ul
+    {
+        list-style-type: none;
+    }
+</style>
+
+<script src="content.js"></script>
+<script src="addtolist.js"></script>
+<script src="parentchild.js"></script>
+<script src="siblings.js"></script>
+</head>
+
+<body>
+    <div id="main"> 
+        <h1 class="headings">Diners List</h1>
+        <div>
+            <ul  id="dinerTable">
+                    <li class="ly">Michael Del Rio</li>
+                    <li class="ly">Melanie Del Rio</li>
+                    <li class="ly">Kenneth Del Rio</li>
+                    <li class="ly">Jeymie Del Rio</li>
+                    <li class="ly">Madeleine Del Rio</li>
+            </ul>
+        </div>
+        <br/>
+
+        <form >
+            <label>Name:</label>
+            <input type="text" id="name"> </br>
+           
+
+        </form>
+        <br/><br/>
+        <button onclick="sltAll()">Update List</button> <button onclick="addList()">Add to List</button>
+       <button onclick=" parChi()">Show Child</button> <button onclick=" siblings()">Siblings</button>
+    </div>
+    
+</body>
+</html>
