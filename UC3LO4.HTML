@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<!--UC3LO4
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UC3 LO4</title>
+
+    
+    
+    <style>
+        #main{
+            border: 2px;
+            border-style: solid;
+            margin: 20px;
+            padding: 30px;   
+        }
+        #dinerTable ul
+        {
+          list-style-type: none;
+        }
+        .ly
+         {
+          padding: 10px;
+          background-color: cyan;
+         }      
+         #dinerTable #hide
+         {
+             width: 30px;
+         }
+         #dinerTable label
+         {
+             line-height: 52px;
+         }
+    </style>
+
+<script src="content.js"></script>
+<script src="pchild.js"></script>
+<script src="SIBLING.JS"></script>
+</head>
+
+<body>
+    <div id="main"> 
+        <h1 class="headings">Diners List</h1>
+        <div>
+            <form id="search-diner">
+                <input type="text" placeholder="Search diner..." />
+              </form>
+            <ul  id="dinerTable">
+                    <li class="ly">Sandy Jones</li>
+                    <li class="ly">Xander Jones</li>
+                    <li class="ly">Brent Jones</li>
+                    <li class="ly">Chloe Jones</li>
+            </ul>
+        </div>
+        <br/>
+
+        <form id="add-diner">
+            <input type="checkbox" id="hide">
+            <label for="hide">Hide All Diners</label><br><br>
+            
+            <label>Name:</label>
+            <input type="text" id="name" placeholder="add diner to list"><button>Add to List</button> </br>
+           
+
+        </form>
+        <br/><br/>
+        
+    </div>
+    <script>
+        //declarations
+        const addDiners = document.querySelector('#dinerTable');
+        const addForm = document.forms['add-diner'];
+        //create eventlistener
+        addForm.addEventListener('submit',function(e){
+        e.preventDefault();
+        //to capture the value from the textbox
+        const getValues = addForm.querySelector('input[type="text"]').value; 
+
+        //create li element
+        const li = document.createElement('li');
+        //insert the value to li
+        li.textContent = getValues;
+        //add li to dinertable
+        addDiners.appendChild(li);
+        //to add class name
+        li.classList.add('ly');
+                 
+         });
+         //hide diner list
+        const hideDiner = document.querySelector('#hide');
+        hideDiner.addEventListener('change',function(e){
+            if(hideDiner.checked){
+                addDiners.style.display ="none";
+            } else{
+                addDiners.style.display = "initial";
+            }
+        });
+
+        //search
+        const searchBar = document.forms['search-diner'].querySelector('input');
+        searchBar.addEventListener('keyup',function(e){
+            const ins = e.target.value.toLowerCase();
+            const dinerNames = addDiners.getElementsByTagName('li');
+            Array.from(dinerNames).forEach(function(dinerName){
+                const specificName = dinerName.textContent;
+                if(specificName.toLowerCase().indexOf(ins) != -1){
+                    dinerName.style.display = 'block';
+                } else{
+                    dinerName.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
