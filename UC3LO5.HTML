@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!--UC3LO5
+Nathaniel Aromin
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UC3LO5</title>
+    
+    <!--<script src="showContent.js"></script>
+    <script src="addToList.js"></script>
+    <script src="parentChild.js"></script>
+    <script src="kapatid.js"></script>-->
+    <link href="style2.css" rel="stylesheet" />
+    <script src="myjava.js"></script>
+
+</head>
+
+<body>
+    <div id = main>
+    <div id="main1"> 
+        <h1 class="headings">Diners List</h1>
+        <div>
+            <form id="search-diner">
+                <input type="text" placeholder="Search diner..." />
+              </form>
+            <ul  id="dinerTable">
+                    <li class="ly">Kateleen Swift</li>
+                    <li class="ly">Lee Min Jo</li>
+                    <li class="ly">Park Shin You</li>
+                    <li class="ly">Avril Song</li>
+            </ul>
+        </div>
+        <br/>
+
+        <form id="add-diner">
+            <input type="checkbox" id="hide">
+            <label for="hide">Hide All Diners</label><br><br>
+            
+            <label>Name:</label>
+            <input type="text" id="name" placeholder="add diner to list"><button>Add to List</button> </br>
+           
+
+        </form>
+       
+    </div>
+    <div id="main2">
+        <h1>MENU LIST</h1>
+
+        <div id="tabbed-content">
+            <ul class="tabs">
+              <li data-target="#meat" class="active">Meat</li>
+              <li data-target="#fish">Fish</li>
+              <li data-target="#vegetable">Vegetables</li>
+            </ul>
+            <div class="panel active" id="meat">
+                <p>Content for meat tab...</p>
+                <table>
+                    <tr>
+                        <li>Blue Cheese Beef Tenderloin</li>
+                    </tr>
+                    <tr>
+                        <li>Beef Stroganoff</li>
+                    </tr>
+                    
+                </table>
+            </div>
+            <div class="panel" id="fish">
+                <p>Content for fish tab...</p>
+                <table>
+                    <tr>
+                        <li>Sweet and Sour Tuna</li>
+                    </tr>
+                    <tr>
+                        <li>Grilled Salmon with Lemon</li>
+                    </tr>
+                </table>
+            </div>
+            <div class="panel" id="vegetable">
+                <p>Content for vegetables tab...</p>
+                <table>
+                    <tr>
+                        <li>Cesar Salad</li>
+                    </tr>
+                    <tr>
+                        <li>Fruit and Vegetable Salad</li>
+                    </tr>
+                </table>
+              </div>
+          </div>
+    </div>
+</div>
+    
+ <script>
+        //
+        //declarations
+       
+    </script>
+</body>
+</html>
